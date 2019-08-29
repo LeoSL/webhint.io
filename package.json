@@ -1,20 +1,22 @@
 {
   "dependencies": {
-    "@hint/formatter-html": "^4.1.0",
-    "@hint/utils": "^3.1.0",
+    "@hint/formatter-html": "^4.1.2",
+    "@hint/utils": "^3.1.2",
     "algoliasearch": "^3.33.0",
     "applicationinsights": "^1.4.0",
     "body-parser": "^1.19.0",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
     "globby": "^10.0.1",
-    "highlight.js": "^9.15.8",
-    "hint": "^5.1.1",
+    "highlight.js": "^9.15.9",
+    "hint": "^5.2.0",
     "js-yaml": "^3.13.1",
     "klaw": "^3.0.0",
     "lodash": "^4.17.15",
+    "mkdirp": "^0.5.1",
     "moment": "^2.24.0",
     "request": "^2.88.0",
+    "shelljs": "^0.8.3",
     "strip-indent": "^3.0.0",
     "xss-filters": "^1.2.7"
   },
@@ -34,7 +36,7 @@
     "gulp-htmlmin": "^5.0.0",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^6.0.0",
-    "gulp-load-plugins": "^2.0.0",
+    "gulp-load-plugins": "^2.0.1",
     "gulp-rev": "^9.0.0",
     "gulp-rev-delete-original": "^0.2.3",
     "gulp-rev-replace": "^0.4.4",
@@ -57,16 +59,17 @@
     "markdownlint-cli": "^0.17.0",
     "marked": "^0.7.0",
     "md-2-json": "^1.0.6",
-    "mkdirp": "^0.5.1",
     "mktemp": "^1.0.0",
     "normalize-path": "^3.0.0",
     "npm-run-all": "^4.1.3",
     "remove-markdown": "^0.3.0",
-    "shelljs": "^0.8.3",
     "stylelint": "^10.1.0",
     "sw-precache": "^5.2.1",
     "typescript": "^3.5.3",
     "uslug": "^1.0.4"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   },
   "hexo": {
     "version": "3.9.0"
@@ -90,6 +93,7 @@
     "test": "npm run lint && npm run build",
     "test-local": "hint http://localhost:8080 --tracking=off",
     "test-staging": "hint https://sonarwhal-staging.azurewebsites.net --tracking=on",
+    "test-scanner-staging": "hint https://sonarwhal-scanner-staging.azurewebsites.net --tracking=on",
     "update-site": "node helpers/update-site.js",
     "postinstall": "node helpers/postinstall.js"
   }
